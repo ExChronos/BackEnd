@@ -1,22 +1,11 @@
-nums = []
+import random
 
-for i in range(3):
-    nums.append(int(input(f"Введите число {i}: ")))
+num = random.randrange(100, 999)
+snum = ''
 
-def sum():
-    summ = 0
-    for i in nums:
-        summ += i
-    return summ
+for i in str(num):
+    snum += f'{i},'
 
-def mul():
-    mull = 1
-    for i in nums:
-        mull *= i
-    return mull
+snum = snum[:len(snum)-1]
 
-def aver():
-    summ = sum()
-    return summ/3
-
-print(f'Сумма ваших чисел = {sum()}, перемножение = {mul()}, а среднее значение = {aver()}')
+print(snum)
