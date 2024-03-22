@@ -1,5 +1,22 @@
-film = input('Название фильма: ')
-cinema = input('Название кинотеатра: ')
-date = input('Дата: ')
+nums = []
 
-print(f'Билет на {film} в {cinema} на {date} забронирован')
+for i in range(3):
+    nums.append(int(input(f"Введите число {i}: ")))
+
+def sum():
+    summ = 0
+    for i in nums:
+        summ += i
+    return summ
+
+def mul():
+    mull = 1
+    for i in nums:
+        mull *= i
+    return mull
+
+def aver():
+    summ = sum()
+    return summ/3
+
+print(f'Сумма ваших чисел = {sum()}, перемножение = {mul()}, а среднее значение = {aver()}')
