@@ -1,7 +1,24 @@
-name = input('-Как Вас зовут?\n-')
-print(f'-Добрый день, {name}')
-tech = input('-Укажите название техникума.\n-')
-group = int(input('-Укажите номер вашей группы.\n-'))
-print(f'-Вы обучаетесь в организации {tech} в группе {group}')
-plang = input('-Какой язык программирования вы начинаете изучать?\n-')
-print(f'{name}, желаем Вам успешного обучения программированию на языке {plang}')
+import math
+
+def var5():
+    a = 0.7
+    b = 0.05
+    x = 0.5
+
+    y = (pow(x, 2)*(x+1))/b - pow((math.sin(x+a)), 2)
+
+    return y
+
+
+print(var5())
+
+def var7():
+    a = 1.1
+    b = 0.004
+    x = 0.2
+
+    y = pow(math.sin(pow((pow(x, 2)+a), 2)), 3) + math.sqrt(x//b)
+
+    return y
+
+print(var7())
