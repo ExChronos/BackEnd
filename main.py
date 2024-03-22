@@ -1,11 +1,8 @@
-import random
+rubles = int(input('Цена пирожка:\nРублей: '))
+kopeyki = int(input('Копеек: '))
+value = int(input('Количество пирожков: '))
 
-num = random.randrange(100, 999)
-snum = ''
+kop = (kopeyki*value)%100
+rub = (kopeyki*value)//100 + (rubles*value)
 
-for i in str(num):
-    snum += f'{i},'
-
-snum = snum[:len(snum)-1]
-
-print(snum)
+print(f'Всего {rub} рублей и {kop} копеек.')
