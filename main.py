@@ -17,7 +17,7 @@ def var7():
     b = 0.004
     x = 0.2
 
-    y = pow(math.sin(pow((pow(x, 2)+a), 2)), 3) + math.sqrt(x//b)
+    y = pow(math.sin(pow((pow(x, 2)+a), 2)), 3) - math.sqrt(x//b)
 
     return y
 
