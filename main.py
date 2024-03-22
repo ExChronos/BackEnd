@@ -1,8 +1,7 @@
-rubles = int(input('Цена пирожка:\nРублей: '))
-kopeyki = int(input('Копеек: '))
-value = int(input('Количество пирожков: '))
-
-kop = (kopeyki*value)%100
-rub = (kopeyki*value)//100 + (rubles*value)
-
-print(f'Всего {rub} рублей и {kop} копеек.')
+name = input('-Как Вас зовут?\n-')
+print(f'-Добрый день, {name}')
+tech = input('-Укажите название техникума.\n-')
+group = int(input('-Укажите номер вашей группы.\n-'))
+print(f'-Вы обучаетесь в организации {tech} в группе {group}')
+plang = input('-Какой язык программирования вы начинаете изучать?\n-')
+print(f'{name}, желаем Вам успешного обучения программированию на языке {plang}')
