@@ -1,80 +1,85 @@
-#4.1
-#сумма чисел в массиве
-def four_point_one():
-    query = [i for i in range(12)]
-    sum = 0
+#5.1
+#цена за 1-10 кг конфет
+def five_one():
+    price = 4.12
 
-    for i in query:
-        sum += i
+    for i in range(1, 10):
+        print(f'Цена за {i} кг = {i*price}')
     
-    return sum
+#5.2
+#промежуток A & B
+def five_two():
+    A = int(input('Введите число A: '))
+    B = int(input('Введите число B: '))
 
-
-#4.2
-#сумма чисел в трехзначном числе
-
-def four_point_two():
-    number = int(input('Введите трехзначное число: '))
-    sum3 = 0
-
-    for i in str(number):
-        sum3 += int(i)
-
-    return sum3
-
-#4.3
-#вывод степеней двойки меньше чем N
-
-def four_point_three():
-    N = int(input("Введите число N(Степени 2): "))
-    k = 0
-    num2 = 2**k
-
-    while num2 < N:
-        print(num2)
-        k+=1
-        num2 = 2**k
-
-#4.4
-#вычислить факториал числа N
-
-def four_point_four():
-    N = int(input('Введите число N(Факториал N): '))
-    factor = 1
-    i = 1
-
-    while i <= N:
-        factor *= i
-        i+=1
+    if A < B:
+        for i in range(A, B):
+            if i % 2 == 0:
+                print(i)
+            else:
+                pass
+    elif A > B:
+        for i in range(B, A):
+            if i % 2 == 0:
+                print(i)
+            else:
+                pass
+    else:
+        print(f'A = B')
     
-    return f'{factor}\n'
+#5.3
+#вычислить сумму нескольких чисел
 
-#4.5
-#вывести на экран числа кратные 7
+def five_three():
+    import random
 
-def four_point_five():
-    k = 1
+    nums = [random.randint(1,100) for i in range(21)]
 
-    while k <= 14:
-        print(7*k)
-        k+=1
-    print('\n')
-
-#4.6
-#вычислить сумму 5 произвольных чисел
-
-def four_point_six():
-    nums = []
-    print("Сумма 5 чисел\n")
-
-    for k in range(5):
-        nums.append(int(input('Введите число: ')))
-    
     return sum(nums)
 
-print(four_point_one())
-print(four_point_two())
-four_point_three()
-print(four_point_four())
-four_point_five()
-print(four_point_six())
+#5.4
+#вычислить сумму факториалов N
+
+def five_four():
+    import math
+
+    N = int(input('Введите число N(Сумма факториалов до N): '))
+    factorials = [math.factorial(i) for i in range(1, N+1)]
+
+    return sum(factorials)
+
+#5.5
+#вычислить количество дней оттепели
+
+def five_five():
+    import random
+
+    N = int(input('Введите количество рассматриваемых дней (от 1 до 100): '))
+    weather = [random.randint(-50, 50) for i in range(N)]
+    hot = lambda x: x > 0 
+    upper = [i for i in weather if hot(i)]
+
+    for i in weather:
+        print(i)
+
+    return len(upper)
+
+#5.6
+#вычислить самый тяжелый и самый легкий арбузы
+
+def five_six():
+    import random
+
+    N = int(input('Введите число арбузов: '))
+    watermelons = [random.randint(1, 14) for i in range(N)]
+    maxim = max(watermelons)
+    minim = min(watermelons)
+
+    return f'Тебе (максимальный вес): {maxim}, теще (минимальный вес): {minim}'
+
+five_one()
+five_two()
+print(five_three())
+print(five_four())
+print(five_five())
+print(five_six())
