@@ -83,3 +83,75 @@ print(five_three())
 print(five_four())
 print(five_five())
 print(five_six())
+
+#6.1
+#создание кортежа
+def six_one():
+    kort = (int(input('Введите число: ')) for i in range(5))
+    print(kort, type(kort))
+
+#6.2
+#взятие элемента по индексу
+def six_two():
+    kort5 = (int(input('Введите число: ')) for i in range(5))
+    item = kort5[2]
+    print(item)
+
+#6.3
+#обращение к элементам
+def six_three():
+    s = 'strok'
+    a = [1,2,3.4, 6e2, 'f']
+    b = '1 2 3 4 5'
+    c = '6 7 8 9 0'
+    n = int(input('Введите число (от 0 до 2): '))
+    k = 0
+    if n == 2:
+        k = int(input('Введите число (от 0 до 2): '))
+    elif n < 2 and n >= 0:
+        k = int(input('Введите число (от 0 до 4): '))
+
+    my_tuple = (s, a, (b, c))
+
+    print(my_tuple[n][k])
+
+#6.4
+#сравнение кортежей
+def six_four():
+    tup1 = (1,2,3)
+    tup2 = (4,5,6)
+
+    if len(tup1) > len(tup2):
+        print(tup1[0])
+    else:
+        print(tup2[1])
+
+#6.5
+#срез кортежей
+def six_five():
+    tup = (1,2,3,4,5,6,7)
+    print(tup[2])
+    print(tup[len(tup)-1])
+    print(tup[0:3])
+    print(tup[::2])
+    print(tup[1::2])
+    print(tup[len(tup)::-1])
+
+#6.6
+#объединение кортежей
+def six_six():
+    my_tuple1 = (i for i in range(1,10,2))
+    my_tuple2 = (i for i in range(0,10,2))
+    n = int(input('Введите число n (повторения 1го кортежа): '))
+    k = int(input('Введите число k (повторения 2го кортежа): '))
+
+    my_tuple3 = n*my_tuple1+k*my_tuple2
+
+    print(my_tuple3)
+
+six_one()
+six_two()
+six_three()
+six_four()
+six_five()
+six_six()
