@@ -155,3 +155,48 @@ six_three()
 six_four()
 six_five()
 six_six()
+
+#7.1
+#вывод значений из строки
+
+def seven_one():
+    string = 'Какая-то строка для теста'
+    many = set(string)
+    print(sorted(many))
+
+seven_one()
+
+#7.2
+#вывод общего из двух строк
+
+def seven_two():
+    string1 = 'Змееед'
+    string2 = 'Пчеловод'
+
+    print(set.intersection(set(string1), set(string2)))
+
+#7.3
+#манная каша и овсяная
+
+def seven_three():
+    valOvs = int(input('Введите количество детей, что любят овсянку: '))
+    valMan = int(input('Введите количество детей, что любят манку: '))
+
+    ovs = set()
+    man = set()
+
+
+    for i in range(valOvs):
+        ovs.add(input('Имя ребенка, любящего овсянку: '))
+    
+    for i in range(valMan):
+        man.add(input('Имя ребенка, любящего манку: '))
+
+    if man.intersection(ovs):
+        print(man.intersection(ovs))
+    else:
+        print('Нет детей, что любят манку и овсянку\n')
+
+seven_one()
+seven_two()
+seven_three()
