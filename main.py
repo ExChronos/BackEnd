@@ -200,3 +200,54 @@ def seven_three():
 seven_one()
 seven_two()
 seven_three()
+
+#8.1
+def eight_one():
+    people = [
+        {"name": "Tom", "age": 39, "company": "SuperCorp", "languages": ["Python", "JavaScript"]},
+        {"name": "Bob", "age": 43, "company": "BigCorp", "languages": ["Python", "C++", "C#"]},
+        {"name": "Sam", "age": 28, "company": "LittleCorp", "languages": ["Python", "Java"]}
+    ]
+    
+    for person in people:
+        print(f"Name: {person['name']}")
+        print(f"Last language: {person['languages'].pop()}")        
+       
+       
+#8.2 
+def eight_two():
+    countries_value = int(input('Введите количество стран: '))
+    countries_cities = dict()
+
+    for i in range(countries_value):
+        country = input('Введите название страны: ')
+        cities = input('Введите название городов через пробел: ')
+        
+        countries_cities[country] =  cities.split()
+    
+    citieslist = input('Введите названия городов для поиска (через пробел): ').split(' ')
+    
+    for search_city in citieslist:
+        for key in countries_cities.keys():
+            if search_city in countries_cities[key]:
+                print(f'Город {search_city} находится в {key}')
+                
+#8.3
+def eight_three():
+    from collections import defaultdict
+    phone_base = defaultdict(list)
+    value_users = int(input('Введите количество записей: '))
+    
+    for count in range(value_users):
+        name=input('Введите имя: ')
+        phone_base[name].append(input('Введите номер телефона: '))
+        
+    user_values=int(input('Введите количество записей: '))
+    
+    for count in range(user_values):
+        name=input('Введите иммя: ')
+        
+        if name in phone_base.keys():
+            print(*phone_base[name])
+        else:
+            print('Нет такого пользователя')
